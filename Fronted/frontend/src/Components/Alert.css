@@ -1,0 +1,6 @@
+#bootstrap-overrides .modal-content {
+    width: 70vw;
+}
+#bootstrap-overrides{
+    margin: 1.75rem 15%;
+}

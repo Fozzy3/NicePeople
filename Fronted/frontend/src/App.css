@@ -1,0 +1,81 @@
+
+header{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 15vh;
+}
+header .presentation h1{
+  text-align: center;
+  font-family: Montserrat Bold;
+  font-size: 2.8rem;
+  margin: 20px 10px;
+}
+.presentation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .presentation img{
+  width: 70px;
+}
+
+header input{
+  height: 50%;
+  width: 80%;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #01507C;
+  color: #fff;
+  border:  solid 0 ;
+}
+
+header input:focus {
+  border: 0;
+  box-shadow: none;
+  outline: none;
+}
+
+.box{
+  width: auto;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 40px;
+
+
+}
+.box:nth-child(odd){
+  background-color: #D5F2FB;
+}
+.box:nth-child(even){
+  background-color: #8AD68F;
+
+}
+
+.box h2{
+  font-family: Montserrat Regular;
+  margin: 0;
+  padding: 0;
+  font-size: 2.5rem;
+}
+
+.boton{
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  width: 25%;
+  height: 40%;
+  border-radius: 2rem;
+  box-shadow:  #000 5px 5px 8px;
+  background: #1BC3FA;
+  color: #fff;
+  font-family: Montserrat Regular;
+  font-size: 1.2rem;
+}
+
+.boton:hover{
+  box-shadow:  #01507C 2px 2px 5px;
+
+}
