@@ -1,0 +1,22 @@
+
+form{
+    width: 100%;
+    display: flex;
+    padding: auto;
+    display: flex;
+}
+form input{
+    height: 50%;
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #01507C;
+    color: #fff;
+    border:  solid 0 ;
+  }
+  
+  header input:focus {
+    border: 0;
+    box-shadow: none;
+    outline: none;
+  }

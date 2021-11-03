@@ -6,6 +6,8 @@ export default function Card(mensaje){
 
     const [author, setAuthor] = useState([]);
 
+    let i;
+
     async function  traerApi(){
         await axios.get(`https://newsapi.org/v2/everything?q=${mensaje.ciudad}&apiKey=9548ac7273b243a7bf6baacdf72c5cb6`)
        .then(res => {
@@ -18,23 +20,30 @@ export default function Card(mensaje){
             }, [])
 
 return (
-    <div className="news">
+
+<div className="news">
+                {
+                author.map((value, index) => {
+                    return (<div className="card" key={index}>
+                    <img  className="card-image" src={value.urlToImage} alt="NoticeImage" />
+                    <div className="card-body">
+                        <h5 className="card-title">{value.title}</h5>
+                        <p className="card-text">{value.description}</p>
+                        <a href={value.url} target="_blank" rel="noopener noreferrer">
+                            <div className="verNoticia">
+                                <span>Ver Noticia</span>
+                            </div>
+                        </a>
+                    </div>
+                    </div>)
+                    
+                 })
+                 
+
+                }
+
         
-        {
-            author.map((item) => {
-                console.log(item);
-                <div className="card" key="1">
-                <img src="" alt="" />
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <p className="card-text">{item.author}</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
-                </div>
-                </div>
-            })
-        }
     </div>
 
-    );
+    )
   }

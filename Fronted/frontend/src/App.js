@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import {Search} from './Components/Search'
 import axios from 'axios';
 import Alert from './Components/Alert';
 import icono from './assets/img/icon.png';
@@ -31,7 +32,7 @@ export default class PersonList extends React.Component {
           <img src={icono} alt="Icono" />
         <h1>WEATHER AND NEWS</h1>
           </div>
-        <input type="search" />
+          <Search/>
         </header>
         {
           this.state.city.map(ciu => (

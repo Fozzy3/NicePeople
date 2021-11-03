@@ -20,22 +20,6 @@ header .presentation img{
   width: 70px;
 }
 
-header input{
-  height: 50%;
-  width: 80%;
-  margin: auto;
-  border-radius: 20px;
-  background-color: #01507C;
-  color: #fff;
-  border:  solid 0 ;
-}
-
-header input:focus {
-  border: 0;
-  box-shadow: none;
-  outline: none;
-}
-
 .box{
   width: auto;
   height: 200px;
@@ -43,8 +27,6 @@ header input:focus {
   justify-content: space-around;
   align-items: center;
   padding: 0px 40px;
-
-
 }
 .box:nth-child(odd){
   background-color: #D5F2FB;
