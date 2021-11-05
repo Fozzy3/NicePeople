@@ -12,23 +12,27 @@ export default  function Example(mensaje) {
     const [weather, setWeather] = useState([]);
     const [descrip, setDescrip] = useState([]);
     const [icon, setIcon] = useState();
+    const [windSpeed, setWindSeep] = useState();
+    const [temp, setTemp] = useState();
     
-    async function  traerApi(){
-      await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${mensaje.ciudad}&appid=dbf16ad10e6191d9e557dce0d336a1e5`)
-     .then(res => {
-       const weather = res.data;
-       setWeather(weather)
-       setDescrip(weather.weather[0].description)
-       setIcon(weather.weather[0].icon)
-     })
-    }
-        useEffect( () => {
-          traerApi();
+    useEffect( () => {
+     let traerApi = async() => {
+        await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${mensaje.ciudad}&appid=dbf16ad10e6191d9e557dce0d336a1e5`)
+       .then(res => {
+         const weather = res.data;
+         setWeather(weather)
+         setDescrip(weather.weather[0].description)
+         setIcon(weather.weather[0].icon)
+         setWindSeep(weather.wind.speed)
+         setTemp(parseFloat((weather.main.temp) - 273.15).toFixed(2))
+       })
+      }
+      traerApi();
           }, [])
             
-            return (
+    return (
                 <>
-
+                {console.log(weather)}
         <button type="button" onClick={() => setShow(true)} className="boton">Wether and News...</button>
   
         <Modal
@@ -45,9 +49,13 @@ export default  function Example(mensaje) {
           </Modal.Header>
           <Modal.Body>
             <div className="body_modal">
-              <p>Weather Descripcion: {descrip}</p>
-            <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="" />
-            {icon}
+              <div className="clima">
+                <p>Weather Descripcion: {descrip}</p>
+                <p>Wind Speed: {windSpeed} m/s</p>
+                <p>Temperature: {temp} C°</p>
+
+              </div>        
+            <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="Weather" />
             <Card ciudad={weather.name}/>
             </div>
           </Modal.Body>

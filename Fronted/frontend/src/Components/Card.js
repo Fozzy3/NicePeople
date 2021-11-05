@@ -6,16 +6,15 @@ export default function Card(mensaje){
 
     const [author, setAuthor] = useState([]);
 
-    let i;
 
-    async function  traerApi(){
-        await axios.get(`https://newsapi.org/v2/everything?q=${mensaje.ciudad}&apiKey=9548ac7273b243a7bf6baacdf72c5cb6`)
-       .then(res => {
-                   const aux = res.data.articles;
-                   setAuthor(aux)
-       })
-      }
-          useEffect( () => {
+    useEffect( () => {
+              let traerApi = async() => {
+                  await axios.get(`https://newsapi.org/v2/everything?q=${mensaje.ciudad}&apiKey=9548ac7273b243a7bf6baacdf72c5cb6`)
+                 .then(res => {
+                             const aux = res.data.articles;
+                             setAuthor(aux)
+                 })
+                }
             traerApi();
             }, [])
 
@@ -36,13 +35,9 @@ return (
                         </a>
                     </div>
                     </div>)
-                    
                  })
-                 
-
                 }
 
-        
     </div>
 
     )
