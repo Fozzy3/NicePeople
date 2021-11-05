@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { Modal } from 'react-bootstrap';
 import axios from 'axios';
 import './Alert.css';
@@ -31,8 +31,7 @@ export default  function Example(mensaje) {
           }, [])
             
     return (
-                <>
-                {console.log(weather)}
+        <Fragment>
         <button type="button" onClick={() => setShow(true)} className="boton">Wether and News...</button>
   
         <Modal
@@ -50,17 +49,16 @@ export default  function Example(mensaje) {
           <Modal.Body>
             <div className="body_modal">
               <div className="clima">
-                <p>Weather Descripcion: {descrip}</p>
-                <p>Wind Speed: {windSpeed} m/s</p>
-                <p>Temperature: {temp} C°</p>
-
+                <p><span>Weather Descripcion: </span>{descrip}</p>
+                <p><span>Wind Speed: </span>{windSpeed} m/s</p>
+                <p><span>Temperature: </span>{temp} C°</p>
               </div>        
-            <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="Weather" />
+            <img className="imgClima" src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="Weather" />
             <Card ciudad={weather.name}/>
             </div>
           </Modal.Body>
         </Modal>
-      </>
+        </Fragment>
     );
   }
   

@@ -34,8 +34,8 @@ export const Search = (props) => {
             placeholder="Busca tu cidad Favorita" 
             autoComplete="off" 
             spellCheck="false"
-            />
-            <button type="submit" className="btn btn-primary" onClick={() => guardarCiudad(name)} >Enviar</button>
+            />    
+            <button type="submit" className="Enviar" onClick={() => guardarCiudad(name)} >Enviar</button>
         </form>
         </Fragment>
         )

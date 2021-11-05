@@ -3,20 +3,44 @@ form{
     width: 100%;
     display: flex;
     padding: auto;
-    display: flex;
 }
 form input{
     height: 50%;
     width: 80%;
     margin: auto;
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: #01507C;
     color: #fff;
     border:  solid 0 ;
+    padding: 20px;
   }
   
-  header input:focus {
+  header input:focus{
     border: 0;
     box-shadow: none;
     outline: none;
   }
+
+  header input::placeholder {
+    color: rgba(255, 255, 255, 0.836);
+    font-family: Roboto Regular;
+  }
+
+  form button{
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    background: #01507C;
+    color: #fff;
+    box-shadow: 2px 2px 3px #000;
+  }
+
+  form button:hover{
+    box-shadow: 1px 2px 2px #000;
+
+  }
+

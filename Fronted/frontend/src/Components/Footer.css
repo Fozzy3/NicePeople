@@ -1,0 +1,18 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #01507C;
+    color: #fff;
+    font-family: Roboto Regular;
+    padding: 20px 0px 10px 0px;
+}
+
+.footer .history:hover{
+    background: #1BC3FA;
+    width: 20%;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+}

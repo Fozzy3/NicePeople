@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Modal } from 'react-bootstrap';
+import './Footer.css';
+
 
 export const Footer = () => {
 
@@ -31,10 +33,10 @@ export const Footer = () => {
       return <div>Loading...</div>;
     } else {
       return (
-          <div>
-              <div onClick={() => setShow(true)}>
+      <div className="footer">
+              <div className="history" onClick={() => setShow(true)}>
                 Ver historial
-            </div>
+          </div>
 
         <Modal
         show={show}
@@ -62,9 +64,8 @@ export const Footer = () => {
        
 
         </Modal>
-
         <p>NicePeople 2021 © Todos los derechos reservados</p>
-        </div>
+    </div>
       );
     }
 }
