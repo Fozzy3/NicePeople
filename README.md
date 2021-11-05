@@ -22,4 +22,4 @@ Puesto que usamos diversos paquetes para la creacion de la web, debemos instalar
 
 ## npm start
 
-Iniciamos el aplicativo en local, cabe recalcar que este funcionara el su mayoria sin la necesidad de tener el backend activo, pero no la funcion de mostrar y guardar el historial, no estara activo.
+Iniciamos el aplicativo en local, cabe recalcar que este funcionara en su mayoria sin la necesidad de tener el backend activo, pero no la funcion de mostrar y guardar el historial, no estara activo.
