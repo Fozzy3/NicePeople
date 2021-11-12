@@ -1,6 +1,5 @@
-# NicePeople
+# Prueba Tecnica
 
-Prueba Tecnica para la empresa NicePeople
 
 Ha sido una aplicacion dedicada a mostrar las nmoticias y caracteristicas basicas del clima de cualquier pais deseado.
 
